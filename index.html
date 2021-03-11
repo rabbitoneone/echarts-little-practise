@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      (function () {
+        window.onresize = function () {
+          let w = window.innerWidth;
+          if (w < 1280) {
+            w = 1280;
+          }
+          document.documentElement.style.fontSize = w / 80 + "px";
+        };
+        window.onresize();
+      })();
+    </script>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="bgi">
+      <div class="main">
+        <form action="#">
+          姓名<input type="text" name="name" /> 评分<input
+            type="number"
+            name="score"
+          />
+          薪资<input type="number" name="salary" />
+          <a href="javascript:;" id="addContain">新增</a>
+        </form>
+        <div class="head">
+          <span>姓名</span>
+          <span>评分</span>
+          <span>薪资(单位:万)</span>
+          <span>操作</span>
+        </div>
+        <section>
+          <!-- <div class="one">
+            <span class="item">
+              <span class="info">崔海</span>
+              <input type="text" class="ipt name" value="007" />
+            </span>
+            <span class="item">
+              <span class="info">99</span>
+              <input type="number" class="ipt name" value="99" />
+            </span>
+            <span class="item">
+              <span class="info">20</span>
+              <input type="number" class="ipt name" value="20" />
+            </span>
+            <span class="item">
+              <i class="upd"><img src="./imgs/upd.png" alt="" /></i>
+              <i class="del" index="1"><img src="./imgs/del.png" alt="" /></i>
+              <i class="yes" index="1"><img src="./imgs/yes.png" alt="" /></i>
+              <i class="no"><img src="./imgs/no.png" alt="" /></i>
+            </span>
+          </div> -->
+        </section>
+      </div>
+      <div class="right">
+        <div class="bar"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
